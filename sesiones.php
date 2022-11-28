@@ -21,15 +21,18 @@ echo get_browser_name($_SERVER['HTTP_USER_AGENT']);
 
 if(preg_match('/^([a-z0-9_\.-]+)@educa\.madrid\.org$/', $_POST['email']) ){
     session_start();
-    // Gua
      
     setcookie('Fecha', $fecha, time() + 365 * 24 * 60 * 60);    
     setcookie('nombre_nav', $nav, time() + 365 * 24 * 60 * 60);  
     setcookie('SO', PHP_OS, time() + 365 * 24 * 60 * 60);
-/* header('Location: index.html'); */
-}
+    $_SESSION["user"] = $_POST["usuario"];
+header('Location: principal.php');
+}else{
 
 header("Location: login.php");
+
+}
+
 
 
 ?>

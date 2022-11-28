@@ -7,18 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
- 
-        var date = new Date();
-        
-        navigator.geolocation.getCurrentPosition((posicion) => {
-            $.post("http://localhost/Examen/comprobar.php", { fecha: date , latitude : posicion.coords.latitude, longitude : posicion.coords.longitude }, (response) => {
-                console.log(response.results);
-          });
-        });
-        
-           </script>
-    <form action="comprobar.php" method="POST">
+
+    <form action="sesiones.php" method="POST">
         <label for="">Correo electronico:</label><br><input type="email" name="email" required><br>
         <label for="">Usuario:</label><br> <input type="text" name="usuario" required> <br>
         <br><input type="submit" value="login">
