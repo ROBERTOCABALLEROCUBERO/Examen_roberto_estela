@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-
+<!-- Login de correo y usuario permitiendo solo como valido que se rellenen los campos correctamente -->
     <form action="sesiones.php" method="POST">
         <label for="">Correo electronico:</label><br><input type="email" name="email" required><br>
         <label for="">Usuario:</label><br> <input type="text" name="usuario" required> <br>
